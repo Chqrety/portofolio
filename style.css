@@ -1,0 +1,385 @@
+/* 
+
+First Color = #DDF2FD
+Second Color = #9BBEC8
+Third Color = #427D9D
+Fourth Color = #164863
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 2;
+    background-color: #164863;
+    width: 100%;
+    height: auto;
+    padding: 7px;
+}
+
+.title {
+    margin-left: 5%;
+    justify-self: left;
+    color: #DDF2FD;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+    top: 0;
+    gap: 6px;
+}
+
+.menu a {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #DDF2FD;
+    text-decoration: none;
+}
+
+nav div a h3 {
+    padding: 5px;
+    transition: all .2s ease-in-out;
+}
+
+nav div a h3:hover {
+    /* padding: 3px; */
+    border-radius: 10px;
+    color: #164863;
+    background-color: #DDF2FD;
+}
+
+.home {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -2;
+}
+
+.intro {
+    position: relative;
+    color: #DDF2FD;
+    top: 35%;
+    left: 50%;
+    text-align: center;
+    padding-top: 200px;
+    z-index: 1;
+    height: auto;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.intro h1 {
+    font-size: 55px;
+}
+
+.intro h3 {
+    font-size: larger;
+}
+
+.intro p {
+    font-size: medium;
+}
+
+.intro h3 span {
+    color: #DDF2FD;
+    transition: all .2s ease-in-out;
+}
+
+.intro h3 span:hover {
+    color: #164863;
+    transform: scale(1.3);
+}
+
+.intro button {
+    /* transform-origin: center center; */
+    margin-top: 30px;
+    color: #164863;
+    background-color: #DDF2FD;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+.intro button:hover {
+    color: #DDF2FD;
+    background-color: #164863;
+    transform: scale(1.1);
+}
+
+.aboutMe-bg {
+    height: fit-content;
+    background-image: linear-gradient(#275770, #427D9D);
+    display: block;
+    overflow: hidden;
+}
+
+.object {
+    display: flex;
+    margin: 150px 50px 50px 50px;
+    justify-content: space-around;
+}
+
+.aboutMe,
+.project {
+    padding-right: 150px;
+    z-index: 1;
+    max-width: 1080px;
+    color: #DDF2FD;
+}
+
+.aboutMe h1,
+.project h1 {
+    font-size: 45px;
+    width: fit-content;
+    transition: all .2s ease-in-out;
+}
+
+.aboutMe h1:hover,
+.project h1:hover {
+    color: #164863;
+}
+
+.aboutMe h3,
+.project h3 {
+    font-size: 18px;
+}
+
+.aboutMe h3,
+.aboutMe p,
+.project h3,
+.project p {
+    padding-bottom: 10px;
+}
+
+.aboutMe h3 span,
+.project h3 span {
+    transition: all .2s ease-in-out;
+}
+
+.aboutMe h3 span:hover,
+.project h3 span:hover {
+    color: #164863;
+}
+
+.project img {
+    width: 100%;
+}
+
+.card {
+    /* margin = top right bottom left */
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: #DDF2FD;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #164863;
+    padding: 10px 10px;
+    color: #DDF2FD;
+    flex-direction: column;
+}
+
+.icon {
+    font-size: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icon i {
+    border-radius: 15px;
+    padding: 8px;
+    transition: all .2s ease-in-out;
+    color: #DDF2FD;
+}
+
+.icon i:hover {
+    background-color: #DDF2FD;
+    color: #164863;
+}
+
+.hamburger__menu {
+    display: none;
+}
+
+.mobile__menu {
+    min-height: 500px;
+    color: #DDF2FD;
+    background-color: rgba(0, 0, 0, 0.904);
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.mobile__menu a {
+    color: #DDF2FD;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+
+@media screen and (max-width: 600px) {
+    nav {
+        justify-content: space-between;
+        padding-right: 20px;
+
+    }
+
+    nav div a h3 {
+        overflow: hidden;
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .menu {
+        display: none;
+        gap: 0;
+    }
+
+    .hamburger__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 30px;
+        height: 30px;
+        cursor: pointer;
+        padding: 3px;
+
+    }
+
+    .hamburger__menu span {
+        background-color: white;
+        border-radius: 3px;
+        min-width: 30px;
+        height: 3px;
+        display: block;
+
+    }
+
+    .home {
+        overflow: hidden;
+    }
+
+    .intro h1 {
+        font-size: 29px;
+    }
+
+    .intro h3 {
+        font-size: small;
+    }
+
+    .intro p {
+        font-size: x-small;
+    }
+
+    .aboutMe-bg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutMe {
+        padding: 0;
+        text-align: justify;
+    }
+
+    .aboutMe h1,
+    .project h1 {
+        font-size: 42px;
+    }
+
+    .aboutMe h3,
+    .project h3 {
+        font-size: 16px;
+    }
+
+    .project {
+        padding: 0;
+        text-align: justify;
+    }
+
+    .aboutMe p,
+    .project p {
+        font-size: 12px;
+    }
+
+    .object {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+
+    .card img {
+        height: 360px;
+    }
+
+    .contact h3 {
+        font-size: 12px;
+    }
+
+    .icon {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+
+}
